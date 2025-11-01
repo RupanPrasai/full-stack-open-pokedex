@@ -7,6 +7,11 @@ const PORT = process.env.PORT || 5000
 
 app.use(express.static('dist'))
 
+// dummy endpoint
+app.get('/version', (req, res) => {
+  res.send('1') // change this value to confirm new deployment
+})
+
 app.listen(PORT, () => {
   console.log(`server started on port ${PORT}`)
 })
