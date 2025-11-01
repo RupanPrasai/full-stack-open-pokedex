@@ -61,6 +61,9 @@
     "react-router-dom": "^6.21.1"
   },
   "jest": {
+    "testMatch": [
+      "<rootDir>/test/unit/**/*.jest.spec.[jt]s?(x)"
+    ],
     "testEnvironment": "jsdom",
     "testPathIgnorePatterns": [
       "/node_modules/",

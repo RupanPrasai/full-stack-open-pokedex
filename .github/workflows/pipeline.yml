@@ -35,3 +35,9 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
+      - name: Cypress e2e tests
+        uses: cypress-io/github-action@v5
+        with:
+          command: npx run cypress open
+          start: npm run start-prod
+          wait-on: http://localhost:5000
